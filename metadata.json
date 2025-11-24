@@ -1,0 +1,7 @@
+{
+  "name": "Copy of VibeBooth 2",
+  "description": "Ứng dụng chụp ảnh Photobooth rực rỡ sắc màu, phong cách cute.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

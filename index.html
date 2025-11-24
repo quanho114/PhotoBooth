@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeBooth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Fredoka', 'sans-serif'],
+            },
+            colors: {
+              'brand-pink': '#ff9a9e',
+              'brand-peach': '#fad0c4',
+              'brand-mint': '#a18cd1',
+              'brand-pop': '#ff00cc',
+            },
+            animation: {
+              'flash': 'flash 0.5s ease-out',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              flash: {
+                '0%': { opacity: '1', backgroundColor: 'white' },
+                '100%': { opacity: '0', backgroundColor: 'transparent' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Cute Scrollbar */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05); 
+        border-radius: 8px;
+        margin: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #ff9a9e; 
+        border-radius: 8px;
+        border: 2px solid rgba(0,0,0,0.2);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #ff00cc; 
+      }
+      
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white overflow-hidden font-sans h-screen w-screen">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>
